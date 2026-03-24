@@ -284,7 +284,8 @@
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* force two projects per row on wider screens */
+            grid-template-columns: repeat(2, 1fr);
             gap: 2.5rem;
             animation: fadeInSection 1s ease-out 0.2s both;
         }
@@ -567,6 +568,11 @@
                 width: 100%;
                 text-align: center;
             }
+            /* Make projects stack to one per row on small screens */
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.6rem;
+            }
         }
     </style>
 </head>
@@ -597,24 +603,24 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <a href="https://github.com/yourusername/project1" target="_blank" class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);"></div>
+                <a href="https://github.com/HiraWaheed/FYP-Rentomatic" target="_blank" class="project-card">
+                    <div class="project-image" style="background-image: url('./images/rentomatic.PNG'); background-size: cover; background-position: center;"></div>
                     <div class="project-info">
                         <h3>Rentomatic</h3>
                         <p>One stop shop built with MERN for all your renting needs</p>
                         <span class="project-arrow">→</span>
                     </div>
                 </a>
-                <a href="https://github.com/yourusername/project2" target="_blank" class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);"></div>
+                <a href="https://github.com/HiraWaheed/Daira-App" target="_blank" class="project-card">
+                    <div class="project-image" style="background-image: url('./images/daira-logo.webp'); background-size: cover; background-position: center;"></div>
                     <div class="project-info">
                         <h3>Daira App</h3>
                         <p>Full-stack application for our own univesity event 'Daira'</p>
                         <span class="project-arrow">→</span>
                     </div>
                 </a>
-                <a href="https://github.com/yourusername/project3" target="_blank" class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #00d4ff 0%, #00ff88 100%);"></div>
+                <a href="https://github.com/HiraWaheed/Airline-Reservation-System" target="_blank" class="project-card">
+                    <div class="project-image" style="background-image: url('./images/flight.jpeg'); background-size: cover; background-position: center;"></div>
                     <div class="project-info">
                         <h3>Flight Catcher</h3>
                         <p>Designed as a Desktop application for reserving flights</p>
@@ -626,6 +632,14 @@
                     <div class="project-info">
                         <h3>Raincoat Reminder!</h3>
                         <p>Weather app that lets you never forget the raincoat</p>
+                        <span class="project-arrow">→</span>
+                    </div>
+                </a>
+                <a href="https://peaceful-choux-2ee4a6.netlify.app/" target="_blank" class="project-card">
+                    <div class="project-image" style="background-image: url('./images/shipping.webp'); background-size: cover; background-position: center;"></div>
+                    <div class="project-info">
+                        <h3>Order Shipping Label</h3>
+                        <p>Order management system for generating shipping labels easily and in bulk</p>
                         <span class="project-arrow">→</span>
                     </div>
                 </a>
