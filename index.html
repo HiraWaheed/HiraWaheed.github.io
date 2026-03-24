@@ -290,6 +290,40 @@
             animation: fadeInSection 1s ease-out 0.2s both;
         }
 
+        /* Technologies Section */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            align-items: start;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            padding: 0.9rem 1rem;
+            background: linear-gradient(135deg, rgba(26,31,58,0.4), rgba(0,255,136,0.02));
+            border: 1px solid rgba(0,255,136,0.12);
+            color: var(--text-primary);
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            transition: all 0.25s ease;
+            text-align: center;
+        }
+
+        .tech-item .tech-name {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .tech-item:hover {
+            border-color: var(--accent-neon);
+            transform: translateY(-6px);
+        }
+
         .project-card {
             background: transparent;
             border: none;
@@ -573,6 +607,11 @@
                 grid-template-columns: 1fr;
                 gap: 1.6rem;
             }
+            /* Technologies responsive: two per row on small screens */
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -584,6 +623,7 @@
                 <a href="#intro" class="nav-link active">About</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#experience" class="nav-link">Experience</a>
+                <a href="#technologies" class="nav-link">Technologies</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
         </div>
@@ -604,7 +644,7 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <a href="https://github.com/HiraWaheed/FYP-Rentomatic" target="_blank" class="project-card">
-                    <div class="project-image" style="background-image: url('./images/rentomatic.PNG'); background-size: cover; background-position: center;"></div>
+                    <div class="project-image" style="background-image: url('./images/rentomatic.png'); background-size: cover; background-position: center;"></div>
                     <div class="project-info">
                         <h3>Rentomatic</h3>
                         <p>One stop shop built with MERN for all your renting needs</p>
@@ -628,7 +668,7 @@
                     </div>
                 </a>
                 <a href="https://github.com/HiraWaheed/RainCoatReminder" target="_blank" class="project-card">
-                    <div class="project-image" style="background-image: url('./images/raincoat.png'); background-size: cover; background-position: center;"></div>
+                    <div class="project-image" style="background-image: url('./images/raincoat.PNG'); background-size: cover; background-position: center;"></div>
                     <div class="project-info">
                         <h3>Raincoat Reminder!</h3>
                         <p>Weather app that lets you never forget the raincoat</p>
@@ -653,12 +693,18 @@
             <div class="experience-grid">
                 <div class="experience-item">
                     <h3>Software Engineer</h3>
-                    <div class="role">Devsinc. • 2024 - Present</div>
+                    <div class="role">Devsinc • 2024 - Present</div>
                     <p>Architected and led development of scalable AI-integrated web applications using GraphQL, Django, FastAPI and modern MLOps & DevOps practices. Mentored a team of 5 junior developers and implemented code standards that improved deployment speed by 40%.</p>
                 </div>
                 <div class="experience-item">
+                    <h3>D4WEE 'You Go Girl' Participant</h3>
+                    <div class="role">UN Women x KOICA • 2024 - 2028 </div>
+                    <p>Contributed to digitalization initiatives aimed at empowering women and promoting gender equality in collaboration with South Korea.</p>
+                    <p><a href="https://www.instagram.com/reel/DT-JpXJEXoK/?igsh=OGpnYzltNDkzcDl5" target="_blank">View Project</a></p>
+                </div>
+                <div class="experience-item">
                     <h3>Associate Software Engineer </h3>
-                    <div class="role">Devsinc. • 2023 - 2024</div>
+                    <div class="role">Devsinc • 2023 - 2024</div>
                     <p>Built end-to-end web applications from database design to user interface. Designed and deployed REST APIs serving 50k+ daily active users. Engaged in Donut meetings to expand my network and grow by learning from my peers.</p>
                 </div>
                 <div class="experience-item">
@@ -666,6 +712,21 @@
                     <div class="role">Sparks Foundation • 2022</div>
                     <p>Started my journey in mobile development, integrated third party sign-in services. Collaborated with data science and backend engineers while mastering version control for peer reviews.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies">
+        <div class="container">
+            <h2>Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><span class="tech-name">Python</span></div>
+                <div class="tech-item"><span class="tech-name">MERN</span></div>
+                <div class="tech-item"><span class="tech-name">Postgres</span></div>
+                <div class="tech-item"><span class="tech-name">Postman</span></div>
+                <div class="tech-item"><span class="tech-name">Streamlit</span></div>
+                <div class="tech-item"><span class="tech-name">AWS</span></div>
+                <div class="tech-item"><span class="tech-name">Azure</span></div>
             </div>
         </div>
     </section>
