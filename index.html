@@ -569,50 +569,74 @@
         .contact-link:hover::before {
             left: 0;
         }
+        section h2 {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        section h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            nav {
-                gap: 1.5rem;
-                font-size: 0.8rem;
-            }
-
-            .intro-content h1 {
-                font-size: 3rem;
-            }
-
-            .intro-content p {
-                font-size: 1.1rem;
-            }
-
-            section h2 {
-                font-size: 2.5rem;
-            }
-
-            .contact-links {
-                flex-direction: column;
-            }
-
-            .contact-link {
-                width: 100%;
-                text-align: center;
-            }
-            /* Make projects stack to one per row on small screens */
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 1.6rem;
-            }
-            /* Technologies responsive: two per row on small screens */
-            .tech-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-        }
+    .header-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    nav {
+        gap: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .intro-content h1 {
+        font-size: 3rem;
+    }
+    .intro-content p {
+        font-size: 1.1rem;
+    }
+    section h2 {
+        font-size: 2.5rem;
+    }
+    .contact-links {
+        flex-direction: column;
+    }
+    .contact-link {
+        width: 100%;
+        text-align: center;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+    }
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    section {
+        padding: 4rem 0;
+        margin-top: 6rem;
+    }
+    .container {
+        padding: 0 1.2rem;
+    }
+    .experience-item {
+        padding: 1.5rem;
+    }
+    .project-info {
+        padding: 1.2rem;
+    }
+    .intro-content h1 {
+        font-size: 2.4rem;
+        letter-spacing: -1px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -651,6 +675,21 @@
                         <span class="project-arrow">→</span>
                     </div>
                 </a>
+                <a href="https://devpost.com/software/sehatlink" target="_blank" class="project-card">
+                    <div class="project-image" style="background-image: url('./images/sehatlink_thumbnail.png'); background-size: cover; background-position: center;"></div>
+                    <div class="project-info">
+                        <h3>SehatLink</h3>
+                        <p>An AI portal matching Pakistani doctors to clinical and tech-adjacent roles, helping retain medical talent locally.</p>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span class="project-arrow">→</span>
+                            <button onclick="event.preventDefault(); event.stopPropagation(); window.open('https://sehat-link-bay.vercel.app/', '_blank')"
+                                style="font-size: 0.8rem; color: var(--accent-neon); border: 1px solid rgba(0,255,136,0.4); padding: 0.3rem 0.75rem; background: transparent; cursor: pointer; opacity: 0.75; transition: opacity 0.2s;"
+                                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.75'">
+                                Live Demo ↗
+                            </button>
+                        </div>
+                    </div>
+                </a>
                 <a href="https://github.com/HiraWaheed/Daira-App" target="_blank" class="project-card">
                     <div class="project-image" style="background-image: url('./images/daira-logo.webp'); background-size: cover; background-position: center;"></div>
                     <div class="project-info">
@@ -685,7 +724,7 @@
             <div class="experience-grid">
                 <div class="experience-item">
                     <h3>Software Engineer</h3>
-                    <div class="role">Devsinc • 2024 - Present</div>
+                    <div class="role">Devsinc • 2024 - 2026</div>
                     <p>Architected and led development of scalable AI-integrated web applications using GraphQL, Django, FastAPI and modern MLOps & DevOps practices. Mentored a team of 5 junior developers and implemented code standards that improved deployment speed by 40%.</p>
                 </div>
                 <div class="experience-item">
